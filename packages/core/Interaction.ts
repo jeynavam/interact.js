@@ -1,4 +1,3 @@
-import * as devTools from '@interactjs/dev-tools'
 import * as utils from '@interactjs/utils'
 import Interactable from './Interactable'
 import InteractEvent, { EventPhase } from './InteractEvent'
@@ -150,8 +149,6 @@ export class Interaction<T extends ActionName = any> {
         this.pointers.length < (action.name === ActionName.Gesture ? 2 : 1)) {
       return
     }
-
-    devTools.touchAction(element)
 
     utils.copyAction(this.prepared, action)
 
